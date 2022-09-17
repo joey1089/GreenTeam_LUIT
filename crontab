@@ -1,0 +1,7 @@
+#This script is for log reboot updates
+#This prints timestamp like the below lines
+date +%d-%m-%y/%H:%M:%S >> cronjob_updates.txt
+#16-09-22/20:17:12
+@reboot apt update -fy  >> /var/log/apt/automaticupdates.log
+@reboot apt -y upgrade -fy  >> /var/log/apt/automaticupgrades.log
+
